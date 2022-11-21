@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gerimedica
+  datasource:
+    name: gerimedica
+    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DBNAME}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    driverClassName: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 2 # now only two active session
+      connection-timeout: 10000 # 10 sec
+
+
+server.port:  ${SERVER_PORT}
